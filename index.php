@@ -34,7 +34,7 @@ if(file_exists('pants.flg')) {
 };
 		?>
 		
-		<p class="heading"/>Today, Reid should be...</p>
+		<p class="heading">Today, Reid should be...</p>
 		
 		<?php
 if(file_exists('should.flg')) {
