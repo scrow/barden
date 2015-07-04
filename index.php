@@ -33,6 +33,16 @@ if(file_exists('pants.flg')) {
 	echo('<p class="status">wearing shorts!</p>');
 };
 		?>
+		
+		<p class="heading">Today, Reid should be...</p>
+		
+		<?php
+if(file_exists('should.flg')) {
+	echo('<p class="status">wearing pants!</p>');
+} else {
+	echo('<p class="status">wearing shorts!</p>');
+};
+		?>
 
 		<hr/>
 		
