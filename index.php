@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>ReidBarden.com</title>
+		<title>Reid Barden Pant/Shoe Status</title>
 		<style>
 			p {
 				font-family: serif
