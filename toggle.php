@@ -30,7 +30,7 @@
 		<?php 
 			
 			if(isset($status)){
-				echo '<p> $status </p>';
+				echo "<p> $status </p>";
 			}
 			
 		?>
