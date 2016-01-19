@@ -27,21 +27,19 @@
 		<p class="heading"/>Today, Reid is...</p>
 
 		<?php
-if(file_exists('pants.flg')) {
-	echo('<p class="status">wearing pants!</p>');
-} else {
-	echo('<p class="status">wearing shorts!</p>');
-};
-		?>
+			if(file_exists('pants.flg')) {
+				echo('<p class="status">wearing pants!</p>');
+			} else {
+				echo('<p class="status">wearing shorts!</p>');
+			};
 
-		<p class="heading">Today, Reid should be...</p>
-
-		<?php
-if(file_exists('should.flg')) {
-	echo('<p class="status">wearing pants!</p>');
-} else {
-	echo('<p class="status">wearing shorts!</p>');
-};
+			if(file_exists('shoes.flg')) {
+				echo('<p class="status">wearing 
+shoes!</p>');
+			} else {
+			        echo('<p class="status">wearing 
+flipflops!</p>');
+			};
 		?>
 
 		<hr/>
