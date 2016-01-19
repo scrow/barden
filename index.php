@@ -33,6 +33,8 @@
 				echo('<p class="status">wearing shorts!</p>');
 			};
 
+			echo 'and';
+
 			if(file_exists('shoes.flg')) {
 				echo('<p class="status">wearing 
 shoes!</p>');
