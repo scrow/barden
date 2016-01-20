@@ -16,7 +16,7 @@
 	}	
 	
 	if(isset($_POST['sno'])){
-		unlink('pants.flg');
+		unlink('shoes.flg');
 		$status = 'Shoes No';
 	}		
 ?>
