@@ -52,10 +52,10 @@
 			<br>
 			<label> Password <input type="password" name="password" required> </label>
 			<br>
-			<input type="submit">
+			<input type="submit" name="submit">
 		</form>
 		
-		<p><a href="index.php">Go to the homepage</a> or <a href="toggle.php">toggle again</a>.</p>
+		<p><a href="index.php">Go to the homepage.</a></p>
 
 	</body>
 </html>
