@@ -1,24 +1,32 @@
 <?php 
-	
-	if(isset($_POST['pyes'])){
-		touch('pants.flg');
-		$status = 'Pants Yes';
+	if(isset($_POST['password'])) {
+		if($_POST['password'] == 'password') {
+			switch($_POST['pants']) {
+				case 'yes':
+					touch('pants.flg');
+					$status[] = 'Pants Yes';
+					break;
+				case 'no':
+					unlink('pants.flg');
+					$status[] = 'Pants No';
+					break;
+			}
+			switch($_POST['shoes']) {
+				case 'yes':
+					touch('shoes.flg');
+					$status[] = 'Shoes Yes';
+					break;
+				case 'no':
+					unlink('shoes.flg');
+					$status[] = 'Shoes No';
+					break;
+			}
+		} else {
+			$status[] = 'Incorrect Password';
+		}
+	} else {
+		$status[] = 'No Password';
 	}
-	
-	if(isset($_POST['pno'])){
-		unlink('pants.flg');
-		$status = 'Pants No';
-	}
-	
-	if(isset($_POST['syes'])){
-		touch('shoes.flg');
-		$status = 'Shoes Yes';
-	}	
-	
-	if(isset($_POST['sno'])){
-		unlink('shoes.flg');
-		$status = 'Shoes No';
-	}		
 ?>
 
 <html>
@@ -36,8 +44,13 @@
 		?>
 
 		<form method="post">
-			<label> Pants <button type="submit" name="pyes"> Yes </button> <button type="submit" name="pno"> No </button> </label>
-			<label> Shoes <button type="submit" name="syes"> Yes </button> <button type="submit" name="sno"> No </button> </label>
+			<label> Pants <input type="radio" name="pants" value="yes" required> Yes </input> <input type="radio" name="pants" value="no"> No </input> </label>
+			<br>
+			<label> Shoes <input type="radio" name="shoes" value="yes" required> Yes </input> <input type="radio" name="shoes" value="no"> No </input> </label>
+			<br>
+			<label> Password <input type="password" name="password" required> </label>
+			<br>
+			<input type="submit">
 		</form>
 		
 		<p><a href="index.php">Go to the homepage</a> or <a href="toggle.php">toggle again</a>.</p>
