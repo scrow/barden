@@ -1,31 +1,33 @@
 <?php 
-	if(isset($_POST['password'])) {
-		if($_POST['password'] == 'password') {
-			switch($_POST['pants']) {
-				case 'yes':
-					touch('pants.flg');
-					$status[] = 'Pants Yes';
-					break;
-				case 'no':
-					unlink('pants.flg');
-					$status[] = 'Pants No';
-					break;
-			}
-			switch($_POST['shoes']) {
-				case 'yes':
-					touch('shoes.flg');
-					$status[] = 'Shoes Yes';
-					break;
-				case 'no':
-					unlink('shoes.flg');
-					$status[] = 'Shoes No';
-					break;
+	if(isset($_POST['submit'])){
+		if(isset($_POST['password'])) {
+			if($_POST['password'] == 'password') {
+				switch($_POST['pants']) {
+					case 'yes':
+						touch('pants.flg');
+						$status[] = 'Pants Yes';
+						break;
+					case 'no':
+						unlink('pants.flg');
+						$status[] = 'Pants No';
+						break;
+				}
+				switch($_POST['shoes']) {
+					case 'yes':
+						touch('shoes.flg');
+						$status[] = 'Shoes Yes';
+						break;
+					case 'no':
+						unlink('shoes.flg');
+						$status[] = 'Shoes No';
+						break;
+				}
+			} else {
+				$status[] = 'Incorrect Password';
 			}
 		} else {
-			$status[] = 'Incorrect Password';
+			$status[] = 'No Password';
 		}
-	} else {
-		$status[] = 'No Password';
 	}
 ?>
 
@@ -38,7 +40,7 @@
 		<?php 
 			
 			if(isset($status)){
-				echo "<p> $status </p>";
+				print_r($status);
 			}
 			
 		?>
