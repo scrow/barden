@@ -1,51 +1,38 @@
 <html>
 	<head>
 		<title>Reid Barden Pant/Shoe Status</title>
-		<style>
-			p {
-				font-family: serif
-			}
-
-			p.heading {
-				font-size: 32px;
-				font-weight: bold;
-				text-align: center;
-				margin-top: 100px
-			}
-
-			p.status {
-				font-size: 24px;
-				font-weight: bold;
-				text-align: center;
-				font-style: italic;
-				margin-bottom: 100px
-			}
-
-		</style>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">		
 	</head>
 	<body>
-		<p class="heading"/>Today, Reid is...</p>
+		<div class="container">
+			<div class="row text-xs-center">
+				<h1 class="display-4">Today, Reid is...</h1>
 
-		<?php
-			if(file_exists('pants.flg')) {
-				echo('<p class="status">wearing pants!</p>');
-			} else {
-				echo('<p class="status">wearing shorts!</p>');
-			};
-
-			echo '<p class="status"> and </p>';
-
-			if(file_exists('shoes.flg')) {
-				echo('<p class="status">wearing 
-shoes!</p>');
-			} else {
-			        echo('<p class="status">wearing 
-flipflops!</p>');
-			};
-		?>
-
-		<hr/>
-
-		<p>Refresh for latest update!</p>
+				<?php
+					if(file_exists('pants.flg')) {
+						echo('<p class="lead text-danger"> wearing pants! </p>');
+					} else {
+						echo('<p class="lead text-success"> wearing shorts! </p>');
+					};
+				?>
+		
+					<p> and </p>
+		
+				<?php
+					if(file_exists('shoes.flg')) {
+						echo('<p class="lead text-danger"> wearing shoes! </p>');
+					} else {
+					        echo('<p class="lead text-success"> wearing flipflops! </p>');
+					};
+				?>
+		
+				<hr/>
+		
+				<p>Refresh for latest update!</p>
+				
+				<a class="btn btn-success-outline" href="http://reidbarden.com"> Visit My Website </a>
+				
+			</div>
+		</div>
 	</body>
 </html>
