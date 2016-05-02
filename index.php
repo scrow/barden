@@ -32,6 +32,8 @@
 				
 				<a class="btn btn-success-outline" href="http://reidbarden.com"> Visit My Website </a>
 				
+				<a class="btn btn-secondary-outline" href="json.php"> JSON status </a>
+				
 			</div>
 		</div>
 	</body>
